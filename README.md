@@ -44,6 +44,15 @@ Cluster – совокупность всех узлов и управляющи
 
 ============================================================== 
 
-### Задание 3. Создание Deployment web
+### Задание 3. Создание Deployment web  
+Создадим файл deployment-web.yaml по указанной структуре.  
+<img width="504" height="463" alt="image" src="https://github.com/user-attachments/assets/cbce86d2-84d4-46d8-bf3e-a18c6d23ed86" />
+
+
+Проверим, что он создаллся.  
+<img width="564" height="49" alt="image" src="https://github.com/user-attachments/assets/5f0b5571-4944-49fc-be89-e83571faff1b" />
+<img width="564" height="49" alt="image" src="https://github.com/user-attachments/assets/5f0b5571-4944-49fc-be89-e83571faff1b" />
+
+
  
 
