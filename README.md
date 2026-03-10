@@ -97,7 +97,7 @@ Cluster – совокупность всех узлов и управляющи
 ## Часть 4. Service и доступность
 ### Задание 5. Публикация Service
 
-Выбираю тип NodePort, так как работаю в Killercoda (браузерная среда), где удобно открывать порты через интерфейс.  
+Выбираю тип NodePort, так как работаю в Killercoda.  
 Создадим service-web.yaml.   
 <img width="542" height="308" alt="image" src="https://github.com/user-attachments/assets/d4493900-b27f-40f9-bfdd-cd075d08cff2" />  
 
