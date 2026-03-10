@@ -56,6 +56,19 @@ Cluster – совокупность всех узлов и управляющи
 <img width="530" height="45" alt="image" src="https://github.com/user-attachments/assets/bc3cd327-dbbd-42c6-9829-90a83f0216a7" />  
 При применении манифеста можно отбросить флаг -n с названием namespace, так как мы сделали наш napespace основным в предыдущем задании.
 
+Проверим, что поды запущены с помощью команды **kubectl get deployments,pods**, которая запрашивает одновременно информацию о двух типах объектов — Deployment и Pod в текущем namespace.  
+
+<img width="561" height="181" alt="image" src="https://github.com/user-attachments/assets/2ea36753-b3a7-4891-8bf0-9ba02e5c48cf" />  
+
+Кратко о выводе:
+- Всё работает — 3 пода, все в статусе Running  
+- Масштабирование выполнено — реплик ровно 3, как указано в манифесте  
+- ReplicaSet активен — одинаковый хеш у всех подов  
+
+
+
+
+
 
 
 
