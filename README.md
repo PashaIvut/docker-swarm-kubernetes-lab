@@ -94,6 +94,46 @@ Cluster – совокупность всех узлов и управляющи
 ### Задание 5. Публикация Service
 
 Выбираю тип NodePort, так как работаю в Killercoda (браузерная среда), где удобно открывать порты через интерфейс.  
+Создадим service-web.yaml.   
+<img width="542" height="308" alt="image" src="https://github.com/user-attachments/assets/d4493900-b27f-40f9-bfdd-cd075d08cff2" />  
+
+Применим манифест.
+<img width="511" height="45" alt="image" src="https://github.com/user-attachments/assets/cdb3b992-b00e-4f90-a622-b5bc799079bd" />  
+
+Проверим, что сервис создался.  
+<img width="692" height="92" alt="image" src="https://github.com/user-attachments/assets/98b4b561-af2e-427d-b963-81d58593c4b8" />  
+
+Проверим эндпоинты.
+<img width="786" height="120" alt="image" src="https://github.com/user-attachments/assets/4a824edd-07bd-4c04-9edf-641ea0d22bfa" />  
+Все хорошо, selector совпадает с labels подов.  
+
+Проверим доступность приложения.
+Посмотрим номер NodePort.
+<img width="717" height="71" alt="image" src="https://github.com/user-attachments/assets/a8af2018-fd4a-4273-be82-e79018e0832d" />  
+**80:32260/TCP** - наш порт.
+
+Для проверки откроем меню справа, выберем меню traffic/ports.
+Видим две ноды, введм наш порт 32260 и нажмем access.
+<img width="1456" height="804" alt="image" src="https://github.com/user-attachments/assets/b0567da4-ff16-4563-9668-a41ad55f6b0d" />  
+
+Все работает! Ура! Успех!!! ;)
+<img width="1327" height="524" alt="image" src="https://github.com/user-attachments/assets/4618d140-83c8-45e1-9a87-600cfe6efeae" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
