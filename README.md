@@ -101,13 +101,13 @@ Cluster – совокупность всех узлов и управляющи
 Создадим service-web.yaml.   
 <img width="542" height="308" alt="image" src="https://github.com/user-attachments/assets/d4493900-b27f-40f9-bfdd-cd075d08cff2" />  
 
-Применим манифест.
+Применим манифест.  
 <img width="511" height="45" alt="image" src="https://github.com/user-attachments/assets/cdb3b992-b00e-4f90-a622-b5bc799079bd" />  
 
 Проверим, что сервис создался.  
 <img width="692" height="92" alt="image" src="https://github.com/user-attachments/assets/98b4b561-af2e-427d-b963-81d58593c4b8" />  
 
-Проверим эндпоинты.
+Проверим эндпоинты.  
 <img width="786" height="120" alt="image" src="https://github.com/user-attachments/assets/4a824edd-07bd-4c04-9edf-641ea0d22bfa" />  
 Все хорошо, selector совпадает с labels подов.  
 
