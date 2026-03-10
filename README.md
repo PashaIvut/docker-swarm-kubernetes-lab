@@ -50,8 +50,13 @@ Cluster – совокупность всех узлов и управляющи
 
 
 Проверим, что он создаллся.  
-<img width="564" height="49" alt="image" src="https://github.com/user-attachments/assets/5f0b5571-4944-49fc-be89-e83571faff1b" />
-<img width="564" height="49" alt="image" src="https://github.com/user-attachments/assets/5f0b5571-4944-49fc-be89-e83571faff1b" />
+<img width="564" height="49" alt="image" src="https://github.com/user-attachments/assets/5f0b5571-4944-49fc-be89-e83571faff1b" />  
+
+Применим манифест.
+<img width="530" height="45" alt="image" src="https://github.com/user-attachments/assets/bc3cd327-dbbd-42c6-9829-90a83f0216a7" />
+При применении манифеста можно отбросить флаг -n с названием namespace, так как мы сделали наш napespace основным в предыдущем задании.
+
+
 
 
  
