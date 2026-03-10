@@ -29,7 +29,8 @@ Cluster – совокупность всех узлов и управляющи
 
 ### Задание 2. Namespace
 1) Cоздадим namespace.
-<img width="488" height="44" alt="image" src="https://github.com/user-attachments/assets/4e2cbd99-5e5d-4282-88df-e5c1836ef777" />  
+<img width="488" height="44" alt="image" src="https://github.com/user-attachments/assets/4e2cbd99-5e5d-4282-88df-e5c1836ef777" />
+
 2) Проверим, что он создался.
 <img width="325" height="198" alt="image" src="https://github.com/user-attachments/assets/54d2b233-ab4f-461c-9c06-6f2563cdf954" />
 
