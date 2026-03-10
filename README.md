@@ -121,7 +121,11 @@ Cluster – совокупность всех узлов и управляющи
 <img width="1456" height="804" alt="image" src="https://github.com/user-attachments/assets/b0567da4-ff16-4563-9668-a41ad55f6b0d" />  
 
 Все работает! Ура! Успех!!! ;)
-<img width="1327" height="524" alt="image" src="https://github.com/user-attachments/assets/4618d140-83c8-45e1-9a87-600cfe6efeae" />
+<img width="1327" height="524" alt="image" src="https://github.com/user-attachments/assets/4618d140-83c8-45e1-9a87-600cfe6efeae" />  
+
+Контрольные вопросы:
+- Service имеет постоянный IP и имя, которые не меняются. Он автоматически отслеживает поды по labels и обновляет список endpoints, поэтому трафик всегда идет на живые поды, даже если их IP меняются.
+- Если кратко: ClusterIP — доступен только внутри кластера. NodePort — открывает порт на каждой ноде для доступа извне.
 
 
 
