@@ -132,42 +132,42 @@ Cluster – совокупность всех узлов и управляющи
 ## Часть 5. Rolling update и rollback
 ### Задание 6. Обновление версии (rolling update)
 
-Проверим текущую версию nginx. 
-<img width="605" height="45" alt="image" src="https://github.com/user-attachments/assets/6f2cfeaf-67a8-443e-bf76-bafbd77bf1bc" />
+Проверим текущую версию nginx.   
+<img width="605" height="45" alt="image" src="https://github.com/user-attachments/assets/6f2cfeaf-67a8-443e-bf76-bafbd77bf1bc" />  
 
 
 
-Обновление прошло успешно.
-<img width="652" height="41" alt="image" src="https://github.com/user-attachments/assets/bbd2bd0c-6d57-4e9a-bbe8-6a00b1c69b05" />
+Обновление прошло успешно.  
+<img width="652" height="41" alt="image" src="https://github.com/user-attachments/assets/bbd2bd0c-6d57-4e9a-bbe8-6a00b1c69b05" />  
 
-Видим, как исчезают старые поды и появляются новые.
-<img width="862" height="227" alt="image" src="https://github.com/user-attachments/assets/370f1383-9c42-4c3e-b9fd-b02e2521e354" />
+Видим, как исчезают старые поды и появляются новые.  
+<img width="862" height="227" alt="image" src="https://github.com/user-attachments/assets/370f1383-9c42-4c3e-b9fd-b02e2521e354" />  
 Успешное завершение rollout - "successfully rolled out"
 
-Версия действиетльно новая.
-<img width="611" height="51" alt="image" src="https://github.com/user-attachments/assets/a2a55a24-b706-482f-b32c-3e80ffb5f76d" />
+Версия действиетльно новая.  
+<img width="611" height="51" alt="image" src="https://github.com/user-attachments/assets/a2a55a24-b706-482f-b32c-3e80ffb5f76d" />  
 
-Смотрим историю ревизий.
-<img width="552" height="111" alt="image" src="https://github.com/user-attachments/assets/1539039f-d032-4126-b096-d03726873cac" />
-Ревизия 1 — версия 1.26
-Ревизия 2 — версия 1.27
+Смотрим историю ревизий.  
+<img width="552" height="111" alt="image" src="https://github.com/user-attachments/assets/1539039f-d032-4126-b096-d03726873cac" />  
+Ревизия 1 — версия 1.26  
+Ревизия 2 — версия 1.27  
 
 Контрольные вопросы:
 - При rollout обновляется шаблон подов в Deployment. Deployment создаёт новый ReplicaSet с новым образом, а старый остаётся. Затем постепенно заменяет старые поды новыми, увеличивая количество подов в новом ReplicaSet и уменьшая в старом. 
 - Kubernetes хранит историю ревизий, чтобы можно было выполнить откат на предыдущую стабильную версию в случае проблем с новой.
 
-### Задание 7. Откат (rollback)
-Выполним откат на предыдущую версию. При этом используем только **undo**, потому что откат автоматически происходит к предыдущей ревизии.
-<img width="521" height="39" alt="image" src="https://github.com/user-attachments/assets/9a3141a6-94d7-4cbd-8ac9-e389e2c64d5e" />
+### Задание 7. Откат (rollback)  
+Выполним откат на предыдущую версию. При этом используем только **undo**, потому что откат автоматически происходит к предыдущей ревизии.  
+<img width="521" height="39" alt="image" src="https://github.com/user-attachments/assets/9a3141a6-94d7-4cbd-8ac9-e389e2c64d5e" />  
 
-Откат прошел успешно.
-<img width="542" height="52" alt="image" src="https://github.com/user-attachments/assets/98b0d0f1-e768-4b7f-ab5f-6790cb39775f" />
+Откат прошел успешно.  
+<img width="542" height="52" alt="image" src="https://github.com/user-attachments/assets/98b0d0f1-e768-4b7f-ab5f-6790cb39775f" />  
 
-Доказательство, что вернулись на прежнюю версию.
-<img width="600" height="48" alt="image" src="https://github.com/user-attachments/assets/987483a7-9989-481e-a80c-00ca725a7e11" />
+Доказательство, что вернулись на прежнюю версию.  
+<img width="600" height="48" alt="image" src="https://github.com/user-attachments/assets/987483a7-9989-481e-a80c-00ca725a7e11" />  
 
-Теперь ревизия 3 - это наша вернувшаяся версия.
-<img width="554" height="113" alt="image" src="https://github.com/user-attachments/assets/188fe896-b0d7-4d82-a350-f40691676262" />
+Теперь ревизия 3 - это наша вернувшаяся версия.  
+<img width="554" height="113" alt="image" src="https://github.com/user-attachments/assets/188fe896-b0d7-4d82-a350-f40691676262" />  
 
 Контрольные вопросы:
 - Предыдущей ревизией считается состояние Deployment до последнего обновления. В истории ревизий это номер, который был перед текущим.
