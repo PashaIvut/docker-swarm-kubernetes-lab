@@ -185,6 +185,50 @@ Cluster – совокупность всех узлов и управляющи
 Общий label (app: web-app) — чтобы Service находил все поды. Разные labels (track: stable/canary) — чтобы различать версии и управлять ими.
 
 
+Для начала увеличим stable до 4-х реплик, перед этим добавив label track: stable в Deployment web.  
+<img width="592" height="45" alt="image" src="https://github.com/user-attachments/assets/ed492d77-f6e0-404e-9052-13809acb8dd1" />  
+
+Проверим stable-поды.  
+<img width="890" height="122" alt="image" src="https://github.com/user-attachments/assets/321f55fd-2c80-4dfd-81a2-740f0ae53b89" />  
+
+Создадим canary deployment с другой версией nginx.  
+<img width="241" height="481" alt="image" src="https://github.com/user-attachments/assets/9bf6d185-fb8a-44fd-aaba-342fe19762a7" />  
+
+Проверим, что имеется 4-е stable-пода и 1 canary.  
+<img width="981" height="142" alt="image" src="https://github.com/user-attachments/assets/00a7677a-86e3-416c-a7fe-728340b7898b" />  
+Так и есть! Ура! Победа! ;)  
+
+Проверим эндпоинты.  
+<img width="696" height="86" alt="image" src="https://github.com/user-attachments/assets/351c11fc-4455-4989-8a0f-2044404930c3" />  
+Все хорошо.
+
+### Задание 10. Проверка A–B поведения
+Узнаем имя canary-пода.  
+<img width="531" height="63" alt="image" src="https://github.com/user-attachments/assets/31780b0f-d3a9-40a0-92a3-bf4bffd9c9d4" />  
+
+Начнем просматривать его логи. Отправляем 20 запросов.
+<img width="793" height="344" alt="image" src="https://github.com/user-attachments/assets/2769023e-3b01-4a85-a236-a1e15f486e0f" />  
+
+В среднем в canary под попадало от 3-х до 4-х запросов (было предприянто несколького попыток отправки запросов).  
+<img width="750" height="163" alt="image" src="https://github.com/user-attachments/assets/17b45c0f-917b-415d-9bca-d57a86a902f9" />
+
+Ответ для секции "На подумать":
+Я выбрал вариант фиксация попадания запросов на разные pod'ы через логи, потому что:
+- Простота реализации — не требует каких-либо настроек
+- Наглядность — в логах canary-пода сразу видно, какие запросы на него попали
+- Точность — можно точно посчитать количество запросов на canary и сравнить с общим числом
+
+Контрольные вопросы:  
+- Kubernetes просто кидает запросы случайным образом по всем доступным подам (возможно имеет место какая-то балансировка на основе случайного выбора). Где подов больше — туда чаще и попадает. У меня 4 stable и 1 canary, поэтому canary получает примерно каждый пятый запрос.
+- Labels — для поиска и группировки. По ним Service находит поды. Annotations — что-то типа заметок для людей, система на них не смотрит.
+
+
+
+
+
+
+
+
 
 
 
