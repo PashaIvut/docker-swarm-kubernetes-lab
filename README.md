@@ -179,13 +179,14 @@ Cluster – совокупность всех узлов и управляющи
 ### Задание 8. Проектирование labels
 
 **Схема:**  
-Общий label:  
-  app: web-app  
-
-Различающие labels:  
-  track: stable   (для stable версии)  
-  track: canary   (для canary версии)
-
+========================================  
+= Общий label:                         =  
+=  app: web-app                        =   
+=                                      =  
+= Различающие labels:                  =  
+=  track: stable   (для stable версии) =    
+=  track: canary   (для canary версии) =  
+========================================  
 Общий label (app: web-app) — чтобы Service находил все поды. Разные labels (track: stable/canary) — чтобы различать версии и управлять ими.
 
 
