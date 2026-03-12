@@ -229,23 +229,23 @@ Cluster – совокупность всех узлов и управляющи
 Посмотрим текущий селектор.  
 <img width="595" height="47" alt="image" src="https://github.com/user-attachments/assets/896e13f6-6510-4550-8806-cb7b46bc4393" />  
 
-Добавим ошибку в selector.
-<img width="233" height="40" alt="image" src="https://github.com/user-attachments/assets/138b76be-563d-4fd5-ade6-c15272ab5c36" />
+Добавим ошибку в selector.  
+<img width="233" height="40" alt="image" src="https://github.com/user-attachments/assets/138b76be-563d-4fd5-ade6-c15272ab5c36" />  
 
-Эндпоинты теперь пустые. Сервис не нашел поды.
-<img width="693" height="87" alt="image" src="https://github.com/user-attachments/assets/1f133df5-2f57-4aee-8c3f-19bf6c852cf8" />
+Эндпоинты теперь пустые. Сервис не нашел поды.  
+<img width="693" height="87" alt="image" src="https://github.com/user-attachments/assets/1f133df5-2f57-4aee-8c3f-19bf6c852cf8" />  
 
-Найдем причину. Просмотрим labels у подов.
-<img width="950" height="147" alt="image" src="https://github.com/user-attachments/assets/0b41e622-1418-45d5-b834-81cc59575bb8" />
+Найдем причину. Просмотрим labels у подов.  
+<img width="950" height="147" alt="image" src="https://github.com/user-attachments/assets/0b41e622-1418-45d5-b834-81cc59575bb8" />   
 
-Посмотрим на селектор.
-<img width="568" height="46" alt="image" src="https://github.com/user-attachments/assets/76c98663-1972-4053-ad28-719503e659d6" />  
+Посмотрим на селектор.  
+<img width="568" height="46" alt="image" src="https://github.com/user-attachments/assets/76c98663-1972-4053-ad28-719503e659d6" />   
 
-У подов app=web-app, а сервис ищет app=web-app-wrong — нестыковочка)))
+У подов app=web-app, а сервис ищет app=web-app-wrong — нестыковочка)))  
 
-Откатимся к старому селектору с **app: web-app**.
+Откатимся к старому селектору с **app: web-app**.  
 Все починилось, эндпоинты видны.  
-<img width="691" height="422" alt="image" src="https://github.com/user-attachments/assets/88599fad-3c28-414c-a2de-15d759afb978" />
+<img width="691" height="422" alt="image" src="https://github.com/user-attachments/assets/88599fad-3c28-414c-a2de-15d759afb978" />  
 
 Контрольные вопросы:
 - Service есть, но его selector не совпадает с labels подов. В результате у сервиса нет endpoints, и трафику просто некуда идти. 
