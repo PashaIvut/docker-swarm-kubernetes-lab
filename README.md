@@ -177,7 +177,7 @@ Cluster – совокупность всех узлов и управляющи
 ### Задание 8. Проектирование labels
 
 **Схема:**  
-<img width="487" height="289" alt="image" src="https://github.com/user-attachments/assets/66fa3aef-d58c-4e5f-9b12-28feaf9fa37b" />
+<img width="857" height="496" alt="image" src="https://github.com/user-attachments/assets/bd39ac38-1ec4-4143-8623-fab34612cd85" />
 
 
 Общий label (app: web-app) — чтобы Service находил все поды. Разные labels (track: stable/canary) — чтобы различать версии и управлять ими.
