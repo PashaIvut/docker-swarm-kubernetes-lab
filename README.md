@@ -185,7 +185,7 @@ Cluster – совокупность всех узлов и управляющи
 Общий label (app: web-app) — чтобы Service находил все поды. Разные labels (track: stable/canary) — чтобы различать версии и управлять ими.
 
 
-Для начала увеличим stable до 4-х реплик, перед этим добавив label track: stable в Deployment web.  
+Для начала увеличим stable до 4-х реплик, перед этим добавив label **track: stable** в Deployment web.  
 <img width="592" height="45" alt="image" src="https://github.com/user-attachments/assets/ed492d77-f6e0-404e-9052-13809acb8dd1" />  
 
 Проверим stable-поды.  
