@@ -178,12 +178,9 @@ Cluster – совокупность всех узлов и управляющи
 ## Часть 6. Canary / A–B через две версии и разные реплики
 ### Задание 8. Проектирование labels
 
-# Общий label (для Service)
-app: web-app
+**Схема:**  
+<img width="487" height="289" alt="image" src="https://github.com/user-attachments/assets/66fa3aef-d58c-4e5f-9b12-28feaf9fa37b" />
 
-# Различающие labels
-track: stable   # для stable версии
-track: canary   # для canary версии
 
 Общий label (app: web-app) — чтобы Service находил все поды. Разные labels (track: stable/canary) — чтобы различать версии и управлять ими.
 
